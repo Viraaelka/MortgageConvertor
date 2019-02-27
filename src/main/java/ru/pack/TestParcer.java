@@ -1,12 +1,14 @@
 package ru.pack;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.swing.text.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class TestParcer {
 
