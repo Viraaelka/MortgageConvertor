@@ -2,6 +2,7 @@ package ru.frame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class FrameClass {
     JFrame frame;
@@ -59,6 +60,43 @@ public class FrameClass {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        textValue.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+                textValue.setText("");
+            }
+        });
+        textValue.addKeyListener(new KeyListener() {
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c))
+                { e.consume(); }
+            }
+
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
+        downPayment.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+                        super.mousePressed(e);
+                        downPayment.setText("");
+                    }
+                });
+       term.addMouseListener(new MouseAdapter() {
+           @Override
+           public void mousePressed(MouseEvent e) {
+               super.mousePressed(e);
+               term.setText("");
+           }
+       });
 
     }
     String[]massive = new String[]{"Альфа", "Тинькофф", "Сбербанк", "ВТБ"};
@@ -87,4 +125,18 @@ public class FrameClass {
     JLabel valueMonthlyPayment = new JLabel("test");
     JLabel labelRate = new JLabel("Процентная ставка");
     JLabel valueRate = new JLabel("test");
+
+
+    public static void main(String[] args) {
+        new FrameClass();
+        try {
+            String temp = "", textValue = " 019298192891";
+            for (int i = 0; i < textValue.length(); i += 3) {
+                temp += textValue.substring(i, i + 3) + " ";
+            }
+            System.out.println(temp);
+        }catch(StringIndexOutOfBoundsException e){
+            
+        }
+    }
 }
