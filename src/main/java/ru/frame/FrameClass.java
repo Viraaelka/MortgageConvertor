@@ -75,11 +75,46 @@ public class FrameClass {
             }
 
             public void keyPressed(KeyEvent e) {
-
+             /*   char c = ' ';
+                String temp = "";
+                while(e.isConsumed()) {
+                    for (int i = 0; i < 3; i++) {
+                        c = e.getKeyChar();
+                        temp += "" + c;
+                    }
+                    temp += " ";
+                }
+                textValue.setText(temp); */
             }
 
             public void keyReleased(KeyEvent e) {
 
+            }
+        });
+        textValue.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                char c = ' ';
+                String temp = "";
+                while(e.isActionKey()) {
+                    for (int i = 0; i < 3; i++) {
+                        c = e.getKeyChar();
+                        temp += "" + c;
+                    }
+                    temp += " ";
+                    textValue.setText(" " + temp);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
             }
         });
 
@@ -129,14 +164,24 @@ public class FrameClass {
 
     public static void main(String[] args) {
         new FrameClass();
-        try {
-            String temp = "", textValue = " 019298192891";
+     //   System.out.println(getNewOutputOfString("9192837"));
+        }
+
+        public  String getThreeViewOfTheString(String textValue){
+            String temp = "";
             for (int i = 0; i < textValue.length(); i += 3) {
                 temp += textValue.substring(i, i + 3) + " ";
             }
-            System.out.println(temp);
-        }catch(StringIndexOutOfBoundsException e){
-            
+            return temp;
+    }
+    public String getNewOutputOfString(String textValue){
+        String temp = "";
+        if(textValue.length()%3 != 0) {
+            for (int i = 3 - textValue.length() % 3; i > 0; i--) {
+                textValue = " " + textValue;
+            }
         }
+        temp = getThreeViewOfTheString(textValue);
+        return temp;
     }
 }
