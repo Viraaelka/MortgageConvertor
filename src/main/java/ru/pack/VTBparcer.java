@@ -11,7 +11,7 @@ public class VTBparcer {
     static String linkBuilded = "https://www.vtb.ru/personal/ipoteka/novostrojki/";
     static String linkInProcessBuinding = "https://www.vtb.ru/personal/ipoteka/vtorichnoe-zhile/#calc_0#";
 
-    public double getVTBRate()throws IOException{
+    public static Double getVTBRate()throws IOException{
         Document document = Jsoup.parse(new URL(linkBuilded), 3000);
         Element elem = document.select("div [class = media-slider__inner clear-after]").first();
         Element tdElem = elem.select("li").first();
@@ -19,7 +19,7 @@ public class VTBparcer {
         kup = getPattern(kup);
         return 0.0;
     }
-    public String getPattern(String str){
+    public static String getPattern(String str){
         return null;
     }
 }

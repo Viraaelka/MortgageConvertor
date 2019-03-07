@@ -16,7 +16,7 @@ public class SberParcer {
     static String linkBuilded = "https://www.sberbank.ru/ru/person/credits/home/buying_complete_house";
     static String linkInProcessBuinding = "https://www.sberbank.ru/ru/person/credits/home/buying_project";
 
-    public double getSberRateInBuilded() throws IOException {
+    public static Double getSberRateInBuilded() throws IOException {
 
         Document page = Jsoup.parse(new URL(SberParcer.linkBuilded), 3000);
         Element elem = page.select("div[class = sbrf-rich-outer]").get(1);
@@ -38,7 +38,7 @@ public class SberParcer {
         kup = getPattern(kup);
         return 0.0;
     }
-    public double getSberLinkInProcessBuilding()throws IOException{
+    public static double getSberLinkInProcessBuilding()throws IOException{
         Document page = Jsoup.parse(new URL(SberParcer.linkInProcessBuinding), 3000);
         Element elem = page.select("div[class = sbrf-rich-outer]").first();
         Element pElem = elem.select("p[style = text-align: center;]").last();
@@ -47,7 +47,7 @@ public class SberParcer {
         return 0.0;
     }
 
-    public String getPattern(String link) {
+    public static String getPattern(String link) {
         Pattern pattern = Pattern.compile("(\\D+\\.)");
         Matcher matcher = pattern.matcher(link);
         link = matcher.replaceAll("");

@@ -1,14 +1,28 @@
 package ru.frame;
 
+import ru.pack.AlfaParcer;
+import ru.pack.SberParcer;
+import ru.pack.TinkoffParcer;
+import ru.pack.VTBparcer;
+import ru.ru.calculation.Calculation;
+
 import javax.swing.*;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class FrameClass {
     JFrame frame;
+    int sum = 0;
     public FrameClass(){
         frame = new JFrame();
         frame.setTitle("MortageConvertor");
+        sberToggle.setBounds(30, 40, 50, 20);
+        vtbToggle.setBounds(90, 40, 50, 20);
+        alafToggle.setBounds(150, 40, 50, 20);
+        tinkoffToggle.setBounds(210, 40, 50, 20);
 
         interestRate.setBounds(70, 20, 220, 20);
         labelValue.setBounds(30, 60, 220, 20);
@@ -53,6 +67,15 @@ public class FrameClass {
             panel.getComponent(i).setBounds(10, 10*i + 20*(i-1), 220,100);
         }
 
+        bt.add(alafToggle);
+        bt.add(sberToggle);
+        bt.add(vtbToggle);
+        bt.add(tinkoffToggle);
+
+        frame.add(alafToggle);
+        frame.add(tinkoffToggle);
+        frame.add(sberToggle);
+        frame.add(vtbToggle);
         frame.add(panel);
 
         frame.setSize(300, 600);
@@ -67,35 +90,41 @@ public class FrameClass {
                 textValue.setText("");
             }
         });
-        textValue.addKeyListener(new KeyListener() {
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if (!Character.isDigit(c))
-                { e.consume(); }
-            }
-
-            public void keyPressed(KeyEvent e) {
-             /*   char c = ' ';
-                String temp = "";
-                while(e.isConsumed()) {
-                    for (int i = 0; i < 3; i++) {
-                        c = e.getKeyChar();
-                        temp += "" + c;
-                    }
-                    temp += " ";
-                }
-                textValue.setText(temp); */
-            }
-
+        textValue.addKeyListener(new KeyAdapter() {
+           @Override
             public void keyReleased(KeyEvent e) {
-
+                super.keyReleased(e);
+               sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                if(sum >= 0)
+                    valueLoan.setText(String.valueOf(sum));
+                else
+                    valueLoan.setText("0");
             }
         });
-        textValue.addKeyListener(new KeyAdapter() {
+        downPayment.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e) {
-                super.keyTyped(e);
-                char c = ' ';
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
+                sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                if(sum >= 0)
+                    valueLoan.setText(String.valueOf(sum));
+                else
+                    valueLoan.setText("0");
+            }
+        });
+        term.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
+                // double rateInp, int termInp, int sum
+                valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(Double.parseDouble(valueRate.getText()),
+                        Integer.parseInt(term.getText()),
+                        Integer.parseInt(textValue.getText()))));
+            }
+        });
+
+
+             /*    char c = ' ';
                 String temp = "";
                 while(e.isActionKey()) {
                     for (int i = 0; i < 3; i++) {
@@ -104,19 +133,17 @@ public class FrameClass {
                     }
                     temp += " ";
                     textValue.setText(" " + temp);
-                }
-            }
+                } */
 
-            @Override
-            public void keyPressed(KeyEvent e) {
-                super.keyPressed(e);
-            }
 
+            /*
             @Override
             public void keyReleased(KeyEvent e) {
                 super.keyReleased(e);
-            }
-        });
+                String content =textValue.getText();
+                if (!content.equals(""))
+                    textValue.setEditable(false);
+            } */;
 
         downPayment.addMouseListener(new MouseAdapter() {
                     @Override
@@ -133,6 +160,42 @@ public class FrameClass {
            }
        });
 
+      alafToggle.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               if(alafToggle.isSelected()) {
+                   try {
+                       valueRate.setText(AlfaParcer.getAlfaRate().toString());
+                   }catch(IOException ee){}
+               }
+           }
+       });
+      vtbToggle.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+              if(vtbToggle.isSelected()){
+                  try{
+                      valueRate.setText(VTBparcer.getVTBRate().toString());
+                  }catch(IOException ee){}
+              }
+          }
+      });
+      sberToggle.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+              if(sberToggle.isSelected()) {
+                  try{
+                      valueRate.setText(SberParcer.getSberRateInBuilded().toString());
+                  }catch(IOException ee){}
+              }
+          }
+      });
+      tinkoffToggle.addActionListener(new ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+              if(tinkoffToggle.isSelected()) {
+                  try{
+                      valueRate.setText(TinkoffParcer.getTinkoffRate().toString());
+                  }catch(IOException ee){}
+              }
+          }
+      });
     }
     String[]massive = new String[]{"Альфа", "Тинькофф", "Сбербанк", "ВТБ"};
     //  JComboBox<String> comboBox = new JComboBox<>(massive);
@@ -160,7 +223,12 @@ public class FrameClass {
     JLabel valueMonthlyPayment = new JLabel("test");
     JLabel labelRate = new JLabel("Процентная ставка");
     JLabel valueRate = new JLabel("test");
+    JRadioButton alafToggle = new JRadioButton("Альфа");
+    JRadioButton tinkoffToggle = new JRadioButton("Тинькофф");
+    JRadioButton vtbToggle = new JRadioButton("ВТБ");
+    JRadioButton sberToggle = new JRadioButton("Сбербанк");
 
+    ButtonGroup bt = new ButtonGroup();
 
     public static void main(String[] args) {
         new FrameClass();
