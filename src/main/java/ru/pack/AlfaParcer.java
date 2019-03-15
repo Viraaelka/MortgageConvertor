@@ -13,8 +13,6 @@ public class AlfaParcer {
     public static String link = "https://alfabank.ru/get-money/mortgage/programs/digital-ab/";
 
     public static Double getAlfaRate() throws IOException{
-
-
             Document page = Jsoup.parse(new URL(AlfaParcer.link), 3000);
             Element elem = page.select("h1[class = heading__bitK5 size-h1__13jm2 theme-white__pN1fX heading__27isq").first();
 /*
