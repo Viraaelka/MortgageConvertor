@@ -145,15 +145,18 @@ public class FrameClass {
                         warningMessage.setVisible(true);
                         warningMessage.setEditable(false);
                     }
-                    if (k > 100){
+                    else if (k > 100){
                         warningMessage.setBounds(30,230,220,19);
                         warningMessage.setText("Срок не может быть выше 100 лет");
                         warningMessage.setVisible(true);
                         warningMessage.setEditable(false);
                     }
+                    else {
+                        warningMessage.setVisible(false);
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(),textValue.getText())));
                     }
-                valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                        term.getText(),textValue.getText())));
+                    }
             }
         });
 
