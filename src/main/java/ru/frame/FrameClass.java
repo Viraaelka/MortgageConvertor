@@ -19,18 +19,18 @@ public class FrameClass {
     public FrameClass(){
         frame = new JFrame();
         frame.setTitle("MortageConvertor");
-        sberToggle.setBounds(30, 40, 50, 20);
-        vtbToggle.setBounds(90, 40, 50, 20);
-        alafToggle.setBounds(150, 40, 50, 20);
-        tinkoffToggle.setBounds(210, 40, 50, 20);
+        sberToggle.setBounds(30, 50, 100, 20);
+        vtbToggle.setBounds(30, 70, 100, 20);
+        alafToggle.setBounds(140, 50, 100, 20);
+        tinkoffToggle.setBounds(140, 70, 100, 20);
 
-        interestRate.setBounds(70, 20, 220, 20);
-        labelValue.setBounds(30, 60, 220, 20);
-        textValue.setBounds(30,90,220,20);
-        labelDownPayment.setBounds(30, 120, 220, 20);
-        downPayment.setBounds(30,150, 220, 20);
-        labelTerm.setBounds(30, 180, 220, 20);
-        term.setBounds(30, 210, 220, 20);
+        interestRate.setBounds(45, 15, 220, 20);
+        labelValue.setBounds(30, 100, 220, 20); //
+        textValue.setBounds(30,120,220,20);
+        labelDownPayment.setBounds(30, 150, 220, 20);
+        downPayment.setBounds(30,170, 220, 20);
+        labelTerm.setBounds(30, 200, 220, 20);
+        term.setBounds(30, 220, 220, 20);
         labelLoan.setBounds(30, 240, 220,20);
         panel.setBounds(30, 270, 220, 250);
 
@@ -39,7 +39,12 @@ public class FrameClass {
         labelLoan.setBounds(30,300,220,100);
         labelMonthlyPayment.setBounds(30,360,220,100);
         labelRate.setBounds(30,360,220,100);
-        warningMessage.setFont(font);
+        interestRate.setFont(fontFotTitles);
+        warningMessage.setFont(fontForPoppedUpMes);
+        textValue.setFont(fontForOutputValues);
+        downPayment.setFont(fontForOutputValues);
+        term.setFont(fontForOutputValues);
+        textOffer.setFont(fontFotTitles);
 
         panel.setBackground(Color.LIGHT_GRAY);
         panel.setLayout(null);
@@ -124,14 +129,14 @@ public class FrameClass {
                 super.keyReleased(e);
                 // double rateInp, int termInp, int sum
                 if(textValue.getText().equals("")){
-                    warningMessage.setBounds(30, 90, 220,19);
+                    warningMessage.setBounds(30, 120, 220,19);
                     warningMessage.setBackground(Color.orange);
                  //   warningMessage.setEditable(false);
                     warningMessage.setVisible(true);
                     warningMessage.setText("Введите значение");
                 }
                 else if(downPayment.getText().equals("")){
-                    warningMessage.setBounds(30, 150, 220, 19);
+                    warningMessage.setBounds(30, 170, 220, 19);
                     warningMessage.setBackground(Color.pink);
                   //  warningMessage.setEditable(false);
                     warningMessage.setVisible(true);
@@ -140,13 +145,13 @@ public class FrameClass {
                 else{
                     int k = Integer.parseInt(term.getText());
                     if(k < 5){
-                        warningMessage.setBounds(30,230,220,19);
+                        warningMessage.setBounds(30,240,220,19);
                         warningMessage.setText("Срок не может быть меньше 5 лет");
                         warningMessage.setVisible(true);
                         warningMessage.setEditable(false);
                     }
                     else if (k > 100){
-                        warningMessage.setBounds(30,230,220,19);
+                        warningMessage.setBounds(30,240,220,19);
                         warningMessage.setText("Срок не может быть выше 100 лет");
                         warningMessage.setVisible(true);
                         warningMessage.setEditable(false);
@@ -216,8 +221,7 @@ public class FrameClass {
           }
       });
     }
-   // String[]massive = new String[]{"Альфа", "Тинькофф", "Сбербанк", "ВТБ"};
-    //  JComboBox<String> comboBox = new JComboBox<>(massive);
+
     JLabel interestRate = new JLabel("Калькулятор кредитования");
 
     JLabel labelValue = new JLabel("Стоимость недвижимости");
@@ -228,10 +232,6 @@ public class FrameClass {
     JTextField textValue = new JTextField();
     JTextField downPayment = new JTextField();
     JTextField term = new JTextField();
-
-
-   // JTextField loan = new JTextField("");
-  //  JTextField monthlyPayment = new JTextField();
 
     JPanel panel = new JPanel();
 
@@ -247,11 +247,12 @@ public class FrameClass {
     JRadioButton vtbToggle = new JRadioButton("ВТБ");
     JRadioButton sberToggle = new JRadioButton("Сбербанк");
     JTextField warningMessage = new JTextField();
-    Font font = new Font("George", Font.ITALIC, 12);
-
+    Font fontForPoppedUpMes = new Font("Cambria", Font.ITALIC, 12);
+    Font fontFotTitles = new Font("Cambria", Font.BOLD, 14);
+    Font fontForOutputValues = new Font("Cambria", Font.ITALIC, 12);
+ //   Font generalFont = new Font("")
     ButtonGroup bt = new ButtonGroup();
-    Popup popup;
-    PopupFactory popupFactory = new PopupFactory();
+
 
     public static void main(String[] args) throws IOException{
         new FrameClass();

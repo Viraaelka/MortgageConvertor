@@ -19,7 +19,6 @@ public class FrameSpinner {
 
         }
 */
-
         interestRate.setBounds(70, 20, 220, 20);
         labelValue.setBounds(30, 60, 220, 20);
         textValue.setBounds(30,90,220,20);
