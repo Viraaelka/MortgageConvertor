@@ -7,8 +7,6 @@ import ru.pack.VTBparcer;
 import ru.ru.calculation.Calculation;
 
 import javax.swing.*;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
@@ -16,7 +14,7 @@ import java.io.IOException;
 public class FrameClass {
     JFrame frame;
     int sum = 0;
-    public FrameClass(){
+    public FrameClass() {
         frame = new JFrame();
         frame.setTitle("MortageConvertor");
         sberToggle.setBounds(30, 50, 100, 20);
@@ -24,27 +22,41 @@ public class FrameClass {
         alafToggle.setBounds(140, 50, 100, 20);
         tinkoffToggle.setBounds(140, 70, 100, 20);
 
-        interestRate.setBounds(45, 15, 220, 20);
+        interestRate.setBounds(35, 15, 220, 20);
         labelValue.setBounds(30, 100, 220, 20); //
-        textValue.setBounds(30,120,220,20);
+        textValue.setBounds(30, 120, 220, 20);
         labelDownPayment.setBounds(30, 150, 220, 20);
-        downPayment.setBounds(30,170, 220, 20);
+        downPayment.setBounds(30, 170, 220, 20);
         labelTerm.setBounds(30, 200, 220, 20);
         term.setBounds(30, 220, 220, 20);
-        labelLoan.setBounds(30, 240, 220,20);
+        labelLoan.setBounds(30, 240, 220, 20);
         panel.setBounds(30, 270, 220, 250);
 
-        textOffer.setBounds(30,300,220,100);
-      //  textOffer.setBounds(null);
-        labelLoan.setBounds(30,300,220,100);
-        labelMonthlyPayment.setBounds(30,360,220,100);
-        labelRate.setBounds(30,360,220,100);
+        textOffer.setBounds(30, 300, 220, 100);
+        //  textOffer.setBounds(null);
+        labelLoan.setBounds(30, 300, 220, 100);
+        labelMonthlyPayment.setBounds(30, 360, 220, 100);
+        labelRate.setBounds(30, 360, 220, 100);
         interestRate.setFont(fontFotTitles);
         warningMessage.setFont(fontForPoppedUpMes);
-        textValue.setFont(fontForOutputValues);
-        downPayment.setFont(fontForOutputValues);
-        term.setFont(fontForOutputValues);
+        textValue.setFont(font);
+        downPayment.setFont(font);
+        term.setFont(font);
         textOffer.setFont(fontFotTitles);
+        labelLoan.setFont(font);
+        valueLoan.setFont(font);
+        labelMonthlyPayment.setFont(font);
+        valueMonthlyPayment.setFont(font);
+        labelRate.setFont(font);
+        valueRate.setFont(font);
+        labelValue.setFont(font);
+        labelDownPayment.setFont(font);
+        labelTerm.setFont(font);
+        alafToggle.setFont(font);
+        tinkoffToggle.setFont(font);
+        vtbToggle.setFont(font);
+        sberToggle.setFont(font);
+
 
         panel.setBackground(Color.LIGHT_GRAY);
         panel.setLayout(null);
@@ -69,12 +81,12 @@ public class FrameClass {
         panel.add(valueMonthlyPayment);
         panel.add(labelRate);
         panel.add(valueRate);
-      //  popup = popupFactory.getPopup(frame, panel, 180, 100);
+        //  popup = popupFactory.getPopup(frame, panel, 180, 100);
 
 
         panel.getComponent(0).setBounds(10, 10, 220, 30);
-        for(int i = 1; i <= 6; i++){
-            panel.getComponent(i).setBounds(10, 10*i + 20*(i-1), 220,100);
+        for (int i = 1; i <= 6; i++) {
+            panel.getComponent(i).setBounds(10, 10 * i + 20 * (i - 1), 220, 100);
         }
 
         bt.add(alafToggle);
@@ -93,135 +105,177 @@ public class FrameClass {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        textValue.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-                textValue.setText("");
-                warningMessage.setVisible(false);
-            }
-        });
-        textValue.addKeyListener(new KeyAdapter() {
-           @Override
-            public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);
-               sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                if(sum >= 0)
-                    valueLoan.setText(String.valueOf(sum));
-                else
-                    valueLoan.setText("0");
-            }
-        });
-        downPayment.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);
-                sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                if(sum >= 0)
-                    valueLoan.setText(String.valueOf(sum));
-                else
-                    valueLoan.setText("0");
-            }
-        });
-        term.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);
-                // double rateInp, int termInp, int sum
-                if(textValue.getText().equals("")){
-                    warningMessage.setBounds(30, 120, 220,19);
-                    warningMessage.setBackground(Color.orange);
-                 //   warningMessage.setEditable(false);
-                    warningMessage.setVisible(true);
-                    warningMessage.setText("Введите значение");
+        try {
+            textValue.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    super.mousePressed(e);
+                    textValue.setText("");
+                    warningMessage.setVisible(false);
                 }
-                else if(downPayment.getText().equals("")){
-                    warningMessage.setBounds(30, 170, 220, 19);
-                    warningMessage.setBackground(Color.pink);
-                  //  warningMessage.setEditable(false);
-                    warningMessage.setVisible(true);
-                    warningMessage.setText("Введите значение");
-                }
-                else{
-                    int k = Integer.parseInt(term.getText());
-                    if(k < 5){
-                        warningMessage.setBounds(30,240,220,19);
-                        warningMessage.setText("Срок не может быть меньше 5 лет");
-                        warningMessage.setVisible(true);
-                        warningMessage.setEditable(false);
-                    }
-                    else if (k > 100){
-                        warningMessage.setBounds(30,240,220,19);
-                        warningMessage.setText("Срок не может быть выше 100 лет");
-                        warningMessage.setVisible(true);
-                        warningMessage.setEditable(false);
-                    }
-                    else {
-                        warningMessage.setVisible(false);
+            });
+            textValue.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyReleased(KeyEvent e) {
+                    super.keyReleased(e);
+                    sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                    if (sum >= 0) {
+                        valueLoan.setText(String.valueOf(sum));
                         valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(),textValue.getText())));
+                                term.getText(), textValue.getText())));
+                    } else {
+                        valueLoan.setText("0");
+                        valueMonthlyPayment.setText("0");
                     }
+                    sum = 0;
+                }
+            });
+            downPayment.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyReleased(KeyEvent e) {
+                    super.keyReleased(e);
+                    sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                    if (sum >= 0) {
+                        valueLoan.setText(String.valueOf(sum));
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText())));
+                        System.out.println(sum + " " + valueMonthlyPayment.getText());
+                    } else {
+                        valueLoan.setText("0");
+                        valueMonthlyPayment.setText("0");
                     }
-            }
-        });
-
-
-        downPayment.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mousePressed(MouseEvent e) {
-                        super.mousePressed(e);
-                        downPayment.setText("");
-                        warningMessage.setVisible(false);
+                    sum = 0;
+                }
+            });
+            term.addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyReleased(KeyEvent e) {
+                    super.keyReleased(e);
+                    String temp = textValue.getText();
+                    // double rateInp, int termInp, int sum
+                    if (textValue.getText().equals("")) {
+                        warningMessage.setBounds(30, 120, 220, 19);
+                        warningMessage.setBackground(Color.orange);
+                        //   warningMessage.setEditable(false);
+                        warningMessage.setVisible(true);
+                        warningMessage.setText("Введите значение");
+                        valueLoan.setText("0");
+                        valueMonthlyPayment.setText("0");
+                    } else if (downPayment.getText().equals("")) {
+                        warningMessage.setBounds(30, 170, 220, 19);
+                        warningMessage.setBackground(Color.pink);
+                        //  warningMessage.setEditable(false);
+                        warningMessage.setVisible(true);
+                        warningMessage.setText("Введите значение");
+                        valueLoan.setText("0");
+                        valueMonthlyPayment.setText("0");
+                    } else {
+                        int k = Integer.parseInt(term.getText());
+                        if (k < 5) {
+                            warningMessage.setBounds(30, 240, 220, 19);
+                            warningMessage.setText("Срок не может быть меньше 5 лет");
+                            warningMessage.setVisible(true);
+                            warningMessage.setEditable(false);
+                            valueLoan.setText("0");
+                            valueMonthlyPayment.setText("0");
+                            warningMessage.setBackground(Color.orange);
+                        } else if (k > 100) {
+                            warningMessage.setBounds(30, 240, 220, 19);
+                            warningMessage.setText("Срок не может быть выше 100 лет");
+                            warningMessage.setVisible(true);
+                            warningMessage.setEditable(false);
+                            valueLoan.setText("0");
+                            valueMonthlyPayment.setText("0");
+                            warningMessage.setBackground(Color.orange);
+                        } else {
+                            warningMessage.setVisible(false);
+                            valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                    term.getText(), temp)));
+                            valueLoan.setText(temp);
+                        }
                     }
-                });
-       term.addMouseListener(new MouseAdapter() {
-           @Override
-           public void mousePressed(MouseEvent e) {
-               super.mousePressed(e);
-               term.setText("");
-               warningMessage.setVisible(false);
-           }
-       });
-      alafToggle.addActionListener(new ActionListener() {
-           public void actionPerformed(ActionEvent e) {
-               if(alafToggle.isSelected()) {
-                   try {
-                       valueRate.setText(AlfaParcer.getAlfaRate().toString());
-                       System.out.println(AlfaParcer.getAlfaRate().toString());
-                   }catch(IOException ee){}
-               }
-           }
-       });
-      vtbToggle.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-              if(vtbToggle.isSelected()){
-                  try{
-                      valueRate.setText(VTBparcer.getVTBRate().toString());
-                  }catch(IOException ee){}
-              }
-          }
-      });
-      sberToggle.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-              if(sberToggle.isSelected()) {
-                  try{
-                      valueRate.setText(SberParcer.getSberRateInBuilded().toString());
-                  }catch(IOException ee){}
-              }
-          }
-      });
-      tinkoffToggle.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-              if(tinkoffToggle.isSelected()) {
-                  try{
-                      valueRate.setText(TinkoffParcer.getTinkoffRate().toString());
-                      System.out.println(TinkoffParcer.getTinkoffRate().toString());
-                  }catch(IOException ee){}
-              }
-          }
-      });
+                }
+            });
+            downPayment.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    super.mousePressed(e);
+                    downPayment.setText("");
+                    warningMessage.setVisible(false);
+                }
+            });
+            term.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    super.mousePressed(e);
+                    term.setText("");
+                    warningMessage.setVisible(false);
+                }
+            });
+            alafToggle.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    if (alafToggle.isSelected()) {
+                     //   valueRate.setText("12");
+                    try {
+                        valueRate.setText(AlfaParcer.getAlfaRate().toString());
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText())));
+                        sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                        valueLoan.setText(String.valueOf(sum));
+                    }catch(IOException ee){}
+                        sum = 0;
+                    }
+                }
+            });
+            vtbToggle.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    if (vtbToggle.isSelected()) {
+                       // valueRate.setText("13");
+                    try{
+                        valueRate.setText(VTBparcer.getVTBRate().toString());
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText())));
+                        sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                        valueLoan.setText(String.valueOf(sum));
+                    }catch(IOException ee){}
+                        sum = 0;
+                    }
+                }
+            });
+            sberToggle.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    if (sberToggle.isSelected()) {
+                   //     valueRate.setText("14");
+                    try{
+                        valueRate.setText(SberParcer.getSberRateInBuilded().toString());
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText())));
+                        sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                        valueLoan.setText(String.valueOf(sum));
+                    }catch(IOException ee){}
+                    sum = 0;
+                    }
+                }
+            });
+            tinkoffToggle.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    if (tinkoffToggle.isSelected()) {
+                      //  valueRate.setText("16");
+                    try{
+                        valueRate.setText(TinkoffParcer.getTinkoffRate().toString());
+                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText())));
+                        sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
+                        valueLoan.setText(String.valueOf(sum));
+                    }catch(IOException ee){}
+                    }
+                    sum = 0;
+                }
+            });
+    }catch(NumberFormatException e){
+        e.printStackTrace();
     }
-
+    }
     JLabel interestRate = new JLabel("Калькулятор кредитования");
 
     JLabel labelValue = new JLabel("Стоимость недвижимости");
@@ -248,23 +302,23 @@ public class FrameClass {
     JRadioButton sberToggle = new JRadioButton("Сбербанк");
     JTextField warningMessage = new JTextField();
     Font fontForPoppedUpMes = new Font("Cambria", Font.ITALIC, 12);
-    Font fontFotTitles = new Font("Cambria", Font.BOLD, 14);
-    Font fontForOutputValues = new Font("Cambria", Font.ITALIC, 12);
- //   Font generalFont = new Font("")
+    Font fontFotTitles = new Font("Cambria", Font.BOLD, 16);
+    Font font = new Font("Cambria", 1, 13);
+    //   Font generalFont = new Font("")
     ButtonGroup bt = new ButtonGroup();
 
 
     public static void main(String[] args) throws IOException{
         new FrameClass();
-       // System.out.println(SberParcer.getSberRateInBuilded());
-        }
+        // System.out.println(SberParcer.getSberRateInBuilded());
+    }
 
-        public  String getThreeViewOfTheString(String textValue){
-            String temp = "";
-            for (int i = 0; i < textValue.length(); i += 3) {
-                temp += textValue.substring(i, i + 3) + " ";
-            }
-            return temp;
+    public  String getThreeViewOfTheString(String textValue){
+        String temp = "";
+        for (int i = 0; i < textValue.length(); i += 3) {
+            temp += textValue.substring(i, i + 3) + " ";
+        }
+        return temp;
     }
     public String getNewOutputOfString(String textValue){
         String temp = "";
