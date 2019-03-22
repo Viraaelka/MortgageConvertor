@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f4dd615-3d77-4807-b133-8bd4a190445e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" afterPath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" afterPath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,17 +32,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1055">
-              <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+              <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FrameClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FrameClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="141" column="84" lean-forward="false" selection-start-line="141" selection-start-column="84" selection-end-line="141" selection-end-column="84" />
+            <state relative-caret-position="108">
+              <caret line="135" column="41" lean-forward="false" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3426#3701#0" expanded="true" />
@@ -64,6 +65,18 @@
                 <element signature="e#11303#11304#0" expanded="true" />
                 <element signature="e#11351#12143#0" expanded="true" />
                 <element signature="e#12142#12143#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calculation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,9 +109,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
       </list>
     </option>
   </component>
@@ -115,8 +128,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-376" />
-    <option name="y" value="31" />
+    <option name="x" value="558" />
+    <option name="y" value="83" />
     <option name="width" value="1262" />
     <option name="height" value="718" />
   </component>
@@ -179,31 +192,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="frame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MortageConvertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MortageConvertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="pack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MortageConvertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MortageConvertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="calculation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MortageConvertor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MortageConvertor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FrameClass">
+  <component name="RunManager" selected="Application.Calculation">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -419,8 +408,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.FrameClass" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Calculation" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Calculation" />
+        <item index="1" class="java.lang.String" itemvalue="Application.FrameClass" />
         <item index="2" class="java.lang.String" itemvalue="Application.VTBparcer" />
         <item index="3" class="java.lang.String" itemvalue="Application.TinkoffParcer" />
         <item index="4" class="java.lang.String" itemvalue="Application.SberParcer" />
@@ -442,12 +431,12 @@
       <updated>1551297756647</updated>
       <workItem from="1551297769575" duration="1669000" />
       <workItem from="1551299681213" duration="2358000" />
-      <workItem from="1551703845082" duration="66446000" />
+      <workItem from="1551703845082" duration="67098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70473000" />
+    <option name="totallyTimeSpent" value="71125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -679,7 +668,7 @@
         <state relative-caret-position="162">
           <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -692,26 +681,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1055">
-          <caret line="29" column="38" lean-forward="true" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="141" column="84" lean-forward="false" selection-start-line="141" selection-start-column="84" selection-end-line="141" selection-end-column="84" />
+        <state relative-caret-position="108">
+          <caret line="135" column="41" lean-forward="false" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3426#3701#0" expanded="true" />
@@ -734,6 +715,16 @@
             <element signature="e#11303#11304#0" expanded="true" />
             <element signature="e#11351#12143#0" expanded="true" />
             <element signature="e#12142#12143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
