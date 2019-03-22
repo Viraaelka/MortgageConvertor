@@ -1,5 +1,7 @@
 package ru.ru.calculation;
 
+import ru.frame.FrameClass;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,5 +28,6 @@ public class Calculation {
         String newString = matcher.replaceAll("");
         //   System.out.println("newString " + newString);
         System.out.println(getMonthlyPayment("10.19", "25", "2000000"));
+        new FrameClass();
     }
 }

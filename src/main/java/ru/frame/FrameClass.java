@@ -120,9 +120,9 @@ public class FrameClass {
                     super.keyReleased(e);
                     sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
                     if (sum >= 0) {
-                        valueLoan.setText(String.valueOf(sum));
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
                     } else {
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
@@ -136,10 +136,10 @@ public class FrameClass {
                     super.keyReleased(e);
                     sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
                     if (sum >= 0) {
-                        valueLoan.setText(String.valueOf(sum));
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
-                        System.out.println(sum + " " + valueMonthlyPayment.getText());
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
+                       // System.out.println(sum + " " + valueMonthlyPayment.getText());
                     } else {
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
@@ -189,9 +189,9 @@ public class FrameClass {
                             warningMessage.setBackground(Color.orange);
                         } else {
                             warningMessage.setVisible(false);
-                            valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                    term.getText(), temp)));
-                            valueLoan.setText(temp);
+                            valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                    term.getText(), temp))).trim());
+                            valueLoan.setText(getNewOutputOfString(temp).trim());
                         }
                     }
                 }
@@ -215,13 +215,12 @@ public class FrameClass {
             alafToggle.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     if (alafToggle.isSelected()) {
-                     //   valueRate.setText("12");
                     try {
-                        valueRate.setText(AlfaParcer.getAlfaRate().toString());
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
+                        valueRate.setText(AlfaParcer.getAlfaRate().toString().trim());
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
                         sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                        valueLoan.setText(String.valueOf(sum));
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                     }catch(IOException ee){}
                         sum = 0;
                     }
@@ -230,13 +229,12 @@ public class FrameClass {
             vtbToggle.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     if (vtbToggle.isSelected()) {
-                       // valueRate.setText("13");
                     try{
                         valueRate.setText(VTBparcer.getVTBRate().toString());
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
                         sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                        valueLoan.setText(String.valueOf(sum));
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                     }catch(IOException ee){}
                         sum = 0;
                     }
@@ -245,13 +243,12 @@ public class FrameClass {
             sberToggle.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     if (sberToggle.isSelected()) {
-                   //     valueRate.setText("14");
                     try{
                         valueRate.setText(SberParcer.getSberRateInBuilded().toString());
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
                         sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                        valueLoan.setText(String.valueOf(sum));
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                     }catch(IOException ee){}
                     sum = 0;
                     }
@@ -260,13 +257,12 @@ public class FrameClass {
             tinkoffToggle.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     if (tinkoffToggle.isSelected()) {
-                      //  valueRate.setText("16");
                     try{
                         valueRate.setText(TinkoffParcer.getTinkoffRate().toString());
-                        valueMonthlyPayment.setText(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText())));
+                        valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
+                                term.getText(), textValue.getText()))).trim());
                         sum = Integer.parseInt(textValue.getText()) - Integer.parseInt(downPayment.getText());
-                        valueLoan.setText(String.valueOf(sum));
+                        valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                     }catch(IOException ee){}
                     }
                     sum = 0;
