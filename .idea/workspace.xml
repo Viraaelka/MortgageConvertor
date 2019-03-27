@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f4dd615-3d77-4807-b133-8bd4a190445e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" afterPath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" afterPath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/pack/SberParcer.class" afterPath="$PROJECT_DIR$/target/classes/ru/pack/SberParcer.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/pack/VTBparcer.class" afterPath="$PROJECT_DIR$/target/classes/ru/pack/VTBparcer.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/ru/calculation/Calculation.class" afterPath="$PROJECT_DIR$/target/classes/ru/ru/calculation/Calculation.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,8 +47,8 @@
       <file leaf-file-name="FrameClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="181" column="45" lean-forward="true" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+            <state relative-caret-position="708">
+              <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3426#3701#0" expanded="true" />
@@ -73,11 +79,41 @@
       <file leaf-file-name="Calculation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlfaParcer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TinkoffParcer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VTBparcer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,13 +141,13 @@
         <option value="$PROJECT_DIR$/../Pogoda/src/main/java/Parcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/TestParcer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
       </list>
     </option>
   </component>
@@ -128,10 +164,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="558" />
-    <option name="y" value="83" />
-    <option name="width" value="1262" />
-    <option name="height" value="718" />
+    <option name="x" value="-14" />
+    <option name="y" value="1" />
+    <option name="width" value="948" />
+    <option name="height" value="719" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -201,6 +237,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ru" type="462c0819:PsiDirectoryNode" />
+              <item name="pack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MortageConvertor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MortageConvertor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="calculation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -231,13 +276,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Calculation">
+  <component name="RunManager" selected="Application.FrameClass">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="AlfaParcer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.pack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="ru.pack.AlfaParcer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MortageConvertor_new" />
+      <envs />
     </configuration>
     <configuration name="Calculation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -266,25 +330,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="ru.frame.FrameClass" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MortageConvertor_new" />
-      <envs />
-    </configuration>
-    <configuration name="SberParcer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.pack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.pack.SberParcer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -409,19 +454,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.SberParcer" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TinkoffParcer" />
-      <item index="2" class="java.lang.String" itemvalue="Application.VTBparcer" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Calculation" />
-      <item index="4" class="java.lang.String" itemvalue="Application.FrameClass" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TinkoffParcer" />
+      <item index="1" class="java.lang.String" itemvalue="Application.VTBparcer" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Calculation" />
+      <item index="3" class="java.lang.String" itemvalue="Application.FrameClass" />
+      <item index="4" class="java.lang.String" itemvalue="Application.AlfaParcer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Calculation" />
-        <item index="1" class="java.lang.String" itemvalue="Application.FrameClass" />
-        <item index="2" class="java.lang.String" itemvalue="Application.VTBparcer" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TinkoffParcer" />
-        <item index="4" class="java.lang.String" itemvalue="Application.SberParcer" />
+        <item index="0" class="java.lang.String" itemvalue="Application.FrameClass" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Calculation" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AlfaParcer" />
+        <item index="3" class="java.lang.String" itemvalue="Application.VTBparcer" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TinkoffParcer" />
       </list>
     </recent_temporary>
   </component>
@@ -440,12 +485,12 @@
       <updated>1551297756647</updated>
       <workItem from="1551297769575" duration="1669000" />
       <workItem from="1551299681213" duration="2358000" />
-      <workItem from="1551703845082" duration="70264000" />
+      <workItem from="1551703845082" duration="77968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74291000" />
+    <option name="totallyTimeSpent" value="81995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -636,26 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#790#791#0" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -672,24 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1055">
@@ -698,10 +705,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -710,8 +749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="181" column="45" lean-forward="true" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+        <state relative-caret-position="708">
+          <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3426#3701#0" expanded="true" />

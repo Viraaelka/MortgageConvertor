@@ -3,6 +3,7 @@ package ru.pack;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import ru.ru.calculation.Calculation;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,10 +17,7 @@ public class VTBparcer {
         Element elem = document.select("div [class = media-slider__inner clear-after]").first();
         Element tdElem = elem.select("li").first();
         String kup = tdElem.text();
-        kup = getPattern(kup);
-        return 0.0;
-    }
-    public static String getPattern(String str){
-        return null;
+        kup = Calculation.getRegexString(kup);
+        return Double.parseDouble(kup);
     }
 }

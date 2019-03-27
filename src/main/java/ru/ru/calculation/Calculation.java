@@ -1,7 +1,11 @@
 package ru.ru.calculation;
 
 import ru.frame.FrameClass;
+import ru.pack.AlfaParcer;
+import ru.pack.SberParcer;
+import ru.pack.VTBparcer;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,12 +26,10 @@ public class Calculation {
         return (int) ((sum * (rate*(Math.pow((1 + rate), term)))) / (Math.pow((1 + rate), term) -1));
     }
 
-    public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("");
-        Matcher matcher = pattern.matcher("String to be changed");
+    public static String getRegexString(String kup) {
+        Pattern pattern = Pattern.compile("\\D+");
+        Matcher matcher = pattern.matcher(kup);
         String newString = matcher.replaceAll("");
-        //   System.out.println("newString " + newString);
-        System.out.println(getMonthlyPayment("10.19", "25", "2000000"));
-        new FrameClass();
+        return String.format("%s.%s", newString.substring(0, 2), newString.substring(2, newString.length()));
     }
 }
