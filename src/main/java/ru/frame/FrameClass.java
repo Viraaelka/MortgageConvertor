@@ -138,7 +138,7 @@ public class FrameClass {
                     if (sum >= 0) {
                         valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                         valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), textValue.getText()))).trim());
+                                term.getText(), String.valueOf(sum)))).trim()); // textValue.getText()))).trim());
                        // System.out.println(sum + " " + valueMonthlyPayment.getText());
                     } else {
                         valueLoan.setText("0");
@@ -169,7 +169,7 @@ public class FrameClass {
                         warningMessage.setText("Введите значение");
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
-                    } else {
+                    }  else {
                         int k = Integer.parseInt(term.getText());
                         if (k < 5) {
                             warningMessage.setBounds(30, 240, 220, 19);
@@ -187,13 +187,13 @@ public class FrameClass {
                             valueLoan.setText("0");
                             valueMonthlyPayment.setText("0");
                             warningMessage.setBackground(Color.orange);
-                        } else {
+                        } else{
+
                             warningMessage.setVisible(false);
                             valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
                                     term.getText(), temp))).trim());
                             valueLoan.setText(getNewOutputOfString(temp).trim());
-                        }
-                    }
+                    }}
                 }
             });
             downPayment.addMouseListener(new MouseAdapter() {

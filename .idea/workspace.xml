@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f4dd615-3d77-4807-b133-8bd4a190445e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" afterPath="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" afterPath="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/pack/SberParcer.class" afterPath="$PROJECT_DIR$/target/classes/ru/pack/SberParcer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/pack/VTBparcer.class" afterPath="$PROJECT_DIR$/target/classes/ru/pack/VTBparcer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/ru/calculation/Calculation.class" afterPath="$PROJECT_DIR$/target/classes/ru/ru/calculation/Calculation.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" afterPath="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,30 +40,30 @@
       <file leaf-file-name="FrameClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
+            <state relative-caret-position="69">
+              <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3426#3701#0" expanded="true" />
                 <element signature="e#3700#3701#0" expanded="true" />
                 <element signature="e#3741#4554#0" expanded="true" />
                 <element signature="e#4553#4554#0" expanded="true" />
-                <element signature="e#4596#5498#0" expanded="true" />
-                <element signature="e#5497#5498#0" expanded="true" />
-                <element signature="e#5533#8357#0" expanded="true" />
-                <element signature="e#8356#8357#0" expanded="true" />
-                <element signature="e#8401#8678#0" expanded="true" />
-                <element signature="e#8677#8678#0" expanded="true" />
-                <element signature="e#8715#8985#0" expanded="true" />
-                <element signature="e#8984#8985#0" expanded="true" />
-                <element signature="e#9029#9831#0" expanded="true" />
-                <element signature="e#9830#9831#0" expanded="true" />
-                <element signature="e#9874#10665#0" expanded="true" />
-                <element signature="e#10664#10665#0" expanded="true" />
-                <element signature="e#10709#11508#0" expanded="true" />
-                <element signature="e#11507#11508#0" expanded="true" />
-                <element signature="e#11555#12354#0" expanded="true" />
-                <element signature="e#12353#12354#0" expanded="true" />
+                <element signature="e#4596#5533#0" expanded="true" />
+                <element signature="e#5532#5533#0" expanded="true" />
+                <element signature="e#5568#8368#0" expanded="true" />
+                <element signature="e#8367#8368#0" expanded="true" />
+                <element signature="e#8412#8689#0" expanded="true" />
+                <element signature="e#8688#8689#0" expanded="true" />
+                <element signature="e#8726#8996#0" expanded="true" />
+                <element signature="e#8995#8996#0" expanded="true" />
+                <element signature="e#9040#9842#0" expanded="true" />
+                <element signature="e#9841#9842#0" expanded="true" />
+                <element signature="e#9885#10676#0" expanded="true" />
+                <element signature="e#10675#10676#0" expanded="true" />
+                <element signature="e#10720#11519#0" expanded="true" />
+                <element signature="e#11518#11519#0" expanded="true" />
+                <element signature="e#11566#12365#0" expanded="true" />
+                <element signature="e#12364#12365#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,10 +137,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/TinkoffParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameSpinner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/VTBparcer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/SberParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/pack/AlfaParcer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/ru/calculation/Calculation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java" />
       </list>
     </option>
   </component>
@@ -485,12 +478,12 @@
       <updated>1551297756647</updated>
       <workItem from="1551297769575" duration="1669000" />
       <workItem from="1551299681213" duration="2358000" />
-      <workItem from="1551703845082" duration="77968000" />
+      <workItem from="1551703845082" duration="80953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81995000" />
+    <option name="totallyTimeSpent" value="84980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -599,22 +592,22 @@
             <element signature="e#3700#3701#0" expanded="true" />
             <element signature="e#3741#4554#0" expanded="true" />
             <element signature="e#4553#4554#0" expanded="true" />
-            <element signature="e#4596#5498#0" expanded="true" />
-            <element signature="e#5497#5498#0" expanded="true" />
-            <element signature="e#5533#8357#0" expanded="true" />
-            <element signature="e#8356#8357#0" expanded="true" />
-            <element signature="e#8401#8678#0" expanded="true" />
-            <element signature="e#8677#8678#0" expanded="true" />
-            <element signature="e#8715#8985#0" expanded="true" />
-            <element signature="e#8984#8985#0" expanded="true" />
-            <element signature="e#9029#9831#0" expanded="true" />
-            <element signature="e#9830#9831#0" expanded="true" />
-            <element signature="e#9874#10665#0" expanded="true" />
-            <element signature="e#10664#10665#0" expanded="true" />
-            <element signature="e#10709#11508#0" expanded="true" />
-            <element signature="e#11507#11508#0" expanded="true" />
-            <element signature="e#11555#12354#0" expanded="true" />
-            <element signature="e#12353#12354#0" expanded="true" />
+            <element signature="e#4596#5533#0" expanded="true" />
+            <element signature="e#5532#5533#0" expanded="true" />
+            <element signature="e#5568#8368#0" expanded="true" />
+            <element signature="e#8367#8368#0" expanded="true" />
+            <element signature="e#8412#8689#0" expanded="true" />
+            <element signature="e#8688#8689#0" expanded="true" />
+            <element signature="e#8726#8996#0" expanded="true" />
+            <element signature="e#8995#8996#0" expanded="true" />
+            <element signature="e#9040#9842#0" expanded="true" />
+            <element signature="e#9841#9842#0" expanded="true" />
+            <element signature="e#9885#10676#0" expanded="true" />
+            <element signature="e#10675#10676#0" expanded="true" />
+            <element signature="e#10720#11519#0" expanded="true" />
+            <element signature="e#11518#11519#0" expanded="true" />
+            <element signature="e#11566#12365#0" expanded="true" />
+            <element signature="e#12364#12365#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -749,30 +742,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/frame/FrameClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="251" column="40" lean-forward="false" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
+        <state relative-caret-position="69">
+          <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3426#3701#0" expanded="true" />
             <element signature="e#3700#3701#0" expanded="true" />
             <element signature="e#3741#4554#0" expanded="true" />
             <element signature="e#4553#4554#0" expanded="true" />
-            <element signature="e#4596#5498#0" expanded="true" />
-            <element signature="e#5497#5498#0" expanded="true" />
-            <element signature="e#5533#8357#0" expanded="true" />
-            <element signature="e#8356#8357#0" expanded="true" />
-            <element signature="e#8401#8678#0" expanded="true" />
-            <element signature="e#8677#8678#0" expanded="true" />
-            <element signature="e#8715#8985#0" expanded="true" />
-            <element signature="e#8984#8985#0" expanded="true" />
-            <element signature="e#9029#9831#0" expanded="true" />
-            <element signature="e#9830#9831#0" expanded="true" />
-            <element signature="e#9874#10665#0" expanded="true" />
-            <element signature="e#10664#10665#0" expanded="true" />
-            <element signature="e#10709#11508#0" expanded="true" />
-            <element signature="e#11507#11508#0" expanded="true" />
-            <element signature="e#11555#12354#0" expanded="true" />
-            <element signature="e#12353#12354#0" expanded="true" />
+            <element signature="e#4596#5533#0" expanded="true" />
+            <element signature="e#5532#5533#0" expanded="true" />
+            <element signature="e#5568#8368#0" expanded="true" />
+            <element signature="e#8367#8368#0" expanded="true" />
+            <element signature="e#8412#8689#0" expanded="true" />
+            <element signature="e#8688#8689#0" expanded="true" />
+            <element signature="e#8726#8996#0" expanded="true" />
+            <element signature="e#8995#8996#0" expanded="true" />
+            <element signature="e#9040#9842#0" expanded="true" />
+            <element signature="e#9841#9842#0" expanded="true" />
+            <element signature="e#9885#10676#0" expanded="true" />
+            <element signature="e#10675#10676#0" expanded="true" />
+            <element signature="e#10720#11519#0" expanded="true" />
+            <element signature="e#11518#11519#0" expanded="true" />
+            <element signature="e#11566#12365#0" expanded="true" />
+            <element signature="e#12364#12365#0" expanded="true" />
           </folding>
         </state>
       </provider>
