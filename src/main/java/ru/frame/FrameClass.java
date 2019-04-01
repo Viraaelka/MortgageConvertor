@@ -16,7 +16,7 @@ public class FrameClass {
     int sum = 0;
     public FrameClass() {
         frame = new JFrame();
-        frame.setTitle("MortageConvertor");
+        frame.setTitle("Ипотечный калькулятор");
         sberToggle.setBounds(30, 50, 100, 20);
         vtbToggle.setBounds(30, 70, 100, 20);
         alafToggle.setBounds(140, 50, 100, 20);
@@ -129,6 +129,17 @@ public class FrameClass {
                     }
                     sum = 0;
                 }
+
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    super.keyTyped(e);
+                    char c = e.getKeyChar();
+                    if (textValue.getText().length() > 9)
+                           e.consume();
+                    if (!Character.isDigit(c))
+                            e.consume();
+
+                }
             });
             downPayment.addKeyListener(new KeyAdapter() {
                 @Override
@@ -145,6 +156,17 @@ public class FrameClass {
                         valueMonthlyPayment.setText("0");
                     }
                     sum = 0;
+                }
+
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    super.keyPressed(e);
+                    char c = e.getKeyChar();
+                    if(!Character.isDigit(c)){
+                        e.consume();
+                    }
+                    if (downPayment.getText().length() > 7)
+                        e.consume();
                 }
             });
             term.addKeyListener(new KeyAdapter() {
@@ -194,6 +216,15 @@ public class FrameClass {
                                     term.getText(), temp))).trim());
                             valueLoan.setText(getNewOutputOfString(temp).trim());
                     }}
+                }
+
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    super.keyTyped(e);
+                    char c = e.getKeyChar();
+                    if(!Character.isDigit(c)){
+                        e.consume();
+                    }
                 }
             });
             downPayment.addMouseListener(new MouseAdapter() {
@@ -268,7 +299,7 @@ public class FrameClass {
                     sum = 0;
                 }
             });
-    }catch(NumberFormatException e){
+    }catch(Exception e){
         e.printStackTrace();
     }
     }
