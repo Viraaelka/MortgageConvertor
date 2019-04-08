@@ -1,11 +1,10 @@
 package ru.pack;
 
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import ru.ru.calculation.Calculation;
+import ru.calculation.Calculation;
 
 import java.io.IOException;
 import java.net.URL;

@@ -3,7 +3,7 @@ package ru.pack;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import ru.ru.calculation.Calculation;
+import ru.calculation.Calculation;
 
 import java.io.IOException;
 import java.net.URL;

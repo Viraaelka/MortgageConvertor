@@ -1,17 +1,12 @@
 package ru.pack;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import ru.ru.calculation.Calculation;
+import ru.calculation.Calculation;
 
-import javax.swing.text.html.HTMLDocument;
 import java.io.IOException;
-import java.io.StringReader;
 import java.net.URL;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SberParcer {
     static String linkBuilded = "https://www.sberbank.ru/ru/person/credits/home/buying_complete_house";

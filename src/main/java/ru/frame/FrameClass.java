@@ -4,7 +4,7 @@ import ru.pack.AlfaParcer;
 import ru.pack.SberParcer;
 import ru.pack.TinkoffParcer;
 import ru.pack.VTBparcer;
-import ru.ru.calculation.Calculation;
+import ru.calculation.Calculation;
 
 import javax.swing.*;
 import java.awt.*;

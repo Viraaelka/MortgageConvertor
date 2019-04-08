@@ -1,4 +1,4 @@
-package ru.ru.calculation;
+package ru.calculation;
 
 import ru.frame.FrameClass;
 import ru.pack.AlfaParcer;
