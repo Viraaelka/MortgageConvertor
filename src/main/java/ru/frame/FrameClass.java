@@ -331,13 +331,11 @@ public class FrameClass {
     Font fontForPoppedUpMes = new Font("Cambria", Font.ITALIC, 12);
     Font fontFotTitles = new Font("Cambria", Font.BOLD, 16);
     Font font = new Font("Cambria", 1, 13);
-    //   Font generalFont = new Font("")
     ButtonGroup bt = new ButtonGroup();
 
 
     public static void main(String[] args) throws IOException{
         new FrameClass();
-        // System.out.println(SberParcer.getSberRateInBuilded());
     }
 
     public  String getThreeViewOfTheString(String textValue){
