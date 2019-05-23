@@ -8,9 +8,9 @@ import ru.calculation.Calculation;
 import java.io.IOException;
 import java.net.URL;
 
+/*---------------------------Parsing the loan interest rate for SBERBANK -----------------------------------------*/
 public class SberParcer {
     static String linkBuilded = "https://www.sberbank.ru/ru/person/credits/home/buying_complete_house";
-    static String linkInProcessBuinding = "https://www.sberbank.ru/ru/person/credits/home/buying_project";
 
    public static Double getSberRateInBuilded() throws IOException {
 
@@ -34,14 +34,4 @@ public class SberParcer {
         kup = Calculation.getRegexString(kup);
         return Double.parseDouble(kup);
     }
-    /* Extra method similar to the above - it extracts the rate for apartments that are in the process of building:
-
-        public static Double getSberLinkInProcessBuilding()throws IOException{
-        Document page = Jsoup.parse(new URL(SberParcer.linkInProcessBuinding), 3000);
-        Element elem = page.select("div[class = sbrf-rich-outer]").first();
-        Element pElem = elem.select("p[style = text-align: center;]").last();
-        String kup = pElem.text().replaceAll(",", ".");
-        kup = Calculation.getRegexString(kup);
-        return Double.parseDouble(kup);
-    } */
 }

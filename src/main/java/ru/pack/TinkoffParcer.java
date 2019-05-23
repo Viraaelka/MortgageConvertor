@@ -8,6 +8,8 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 import java.net.URL;
 
+/*---------------------------Parsing the loan interest rate for TINKOFF bank-----------------------------------------*/
+
 public class TinkoffParcer {
     public static String link = "https://www.tinkoff.ru/loans/mortgage/";
 

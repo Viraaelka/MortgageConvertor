@@ -8,9 +8,10 @@ import ru.calculation.Calculation;
 import java.io.IOException;
 import java.net.URL;
 
+/*---------------------------Parsing the loan interest rate for VTB bank-----------------------------------------*/
+
 public class VTBparcer {
     static String linkBuilded = "https://www.vtb.ru/personal/ipoteka/novostrojki/";
-    static String linkInProcessBuinding = "https://www.vtb.ru/personal/ipoteka/vtorichnoe-zhile/#calc_0#";
 
     public static Double getVTBRate()throws IOException{
         Document document = Jsoup.parse(new URL(linkBuilded), 3000);

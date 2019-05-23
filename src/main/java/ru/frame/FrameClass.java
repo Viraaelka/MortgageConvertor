@@ -11,6 +11,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 
+/*-----------------------------------GUI class to make the frame for calculator---------------------------------------*/
+
 public class FrameClass {
     JFrame frame;
     int sum = 0;
@@ -33,7 +35,6 @@ public class FrameClass {
         panel.setBounds(30, 270, 220, 250);
 
         textOffer.setBounds(30, 300, 220, 100);
-        //  textOffer.setBounds(null);
         labelLoan.setBounds(30, 300, 220, 100);
         labelMonthlyPayment.setBounds(30, 360, 220, 100);
         labelRate.setBounds(30, 360, 220, 100);
@@ -70,10 +71,6 @@ public class FrameClass {
         frame.add(labelTerm);
         frame.add(warningMessage);
 
-       /* frame.add(textOffer);
-        frame.add(labelLoan);
-        frame.add(labelMonthlyPayment);
-        frame.add(labelRate); */
         panel.add(textOffer);
         panel.add(labelLoan);
         panel.add(valueLoan);
@@ -81,8 +78,6 @@ public class FrameClass {
         panel.add(valueMonthlyPayment);
         panel.add(labelRate);
         panel.add(valueRate);
-        //  popup = popupFactory.getPopup(frame, panel, 180, 100);
-
 
         panel.getComponent(0).setBounds(10, 10, 220, 30);
         for (int i = 1; i <= 6; i++) {
@@ -104,6 +99,8 @@ public class FrameClass {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+/*---------------------------LISTENERS--------------------------------------------------*/
 
         try {
             textValue.addMouseListener(new MouseAdapter() {
@@ -130,6 +127,7 @@ public class FrameClass {
                     sum = 0;
                 }
 
+                // to enter only digits
                 @Override
                 public void keyTyped(KeyEvent e) {
                     super.keyTyped(e);
@@ -149,8 +147,7 @@ public class FrameClass {
                     if (sum >= 0) {
                         valueLoan.setText(getNewOutputOfString(String.valueOf(sum)).trim());
                         valueMonthlyPayment.setText(getNewOutputOfString(String.valueOf(Calculation.getMonthlyPayment(valueRate.getText(),
-                                term.getText(), String.valueOf(sum)))).trim()); // textValue.getText()))).trim());
-                       // System.out.println(sum + " " + valueMonthlyPayment.getText());
+                                term.getText(), String.valueOf(sum)))).trim());
                     } else {
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
@@ -174,28 +171,28 @@ public class FrameClass {
                 public void keyReleased(KeyEvent e) {
                     super.keyReleased(e);
                     String temp = textValue.getText();
-                    // double rateInp, int termInp, int sum
                     if (textValue.getText().equals("")) {
                         warningMessage.setBounds(30, 120, 220, 19);
                         warningMessage.setBackground(Color.orange);
-                        //   warningMessage.setEditable(false);
                         warningMessage.setVisible(true);
-                        warningMessage.setText("Введите значение");
+                     //   warningMessage.setText("Введите значение");
+                        warningMessage.setText("Input the value");
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
                     } else if (downPayment.getText().equals("")) {
                         warningMessage.setBounds(30, 170, 220, 19);
                         warningMessage.setBackground(Color.pink);
-                        //  warningMessage.setEditable(false);
                         warningMessage.setVisible(true);
-                        warningMessage.setText("Введите значение");
+                     //   warningMessage.setText("Введите значение");
+                        warningMessage.setText("Input the value");
                         valueLoan.setText("0");
                         valueMonthlyPayment.setText("0");
                     }  else {
                         int k = Integer.parseInt(term.getText());
                         if (k < 5) {
                             warningMessage.setBounds(30, 240, 220, 19);
-                            warningMessage.setText("Срок не может быть меньше 5 лет");
+                        //    warningMessage.setText("Срок не может быть меньше 5 лет");
+                            warningMessage.setText("The term cannot be less than 5 years");
                             warningMessage.setVisible(true);
                             warningMessage.setEditable(false);
                             valueLoan.setText("0");
@@ -203,7 +200,8 @@ public class FrameClass {
                             warningMessage.setBackground(Color.orange);
                         } else if (k > 100) {
                             warningMessage.setBounds(30, 240, 220, 19);
-                            warningMessage.setText("Срок не может быть выше 100 лет");
+                         //   warningMessage.setText("Срок не может быть выше 100 лет");
+                            warningMessage.setText("The term cannot be more than 100 years");
                             warningMessage.setVisible(true);
                             warningMessage.setEditable(false);
                             valueLoan.setText("0");
@@ -243,6 +241,9 @@ public class FrameClass {
                     warningMessage.setVisible(false);
                 }
             });
+            
+            /*---------------Setting listeners for Toggle buttons----------------------------*/
+
             alafToggle.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     if (alafToggle.isSelected()) {
@@ -303,19 +304,14 @@ public class FrameClass {
         e.printStackTrace();
     }
     }
-    JLabel interestRate = new JLabel("Калькулятор кредитования");
-
-    JLabel labelValue = new JLabel("Стоимость недвижимости");
-    JLabel labelDownPayment = new JLabel("Первоначальный взнос");
-    JLabel labelTerm = new JLabel("Срок кредитования");
-
-
     JTextField textValue = new JTextField();
     JTextField downPayment = new JTextField();
     JTextField term = new JTextField();
 
     JPanel panel = new JPanel();
 
+/*-------------------RUSSIAN labels-----------------------------------*/
+    /*
     JLabel textOffer = new JLabel("Наше предложение");
     JLabel labelLoan = new JLabel("Сумма кредита");
     JLabel valueLoan = new JLabel();
@@ -327,6 +323,32 @@ public class FrameClass {
     JRadioButton tinkoffToggle = new JRadioButton("Тинькофф");
     JRadioButton vtbToggle = new JRadioButton("ВТБ");
     JRadioButton sberToggle = new JRadioButton("Сбербанк");
+
+    JLabel interestRate = new JLabel("Калькулятор кредитования");
+    JLabel labelValue = new JLabel("Стоимость недвижимости");
+    JLabel labelDownPayment = new JLabel("Первоначальный взнос");
+    JLabel labelTerm = new JLabel("Срок кредитования");
+
+    */
+/*-------------------ENGLISH labels-----------------------------------*/
+
+    JLabel textOffer = new JLabel("Our offer");
+    JLabel labelLoan = new JLabel("Load sum");
+    JLabel valueLoan = new JLabel();
+    JLabel labelMonthlyPayment = new JLabel("Monthly payment");
+    JLabel valueMonthlyPayment = new JLabel();
+    JLabel labelRate = new JLabel("Interest");
+    JLabel valueRate = new JLabel();
+    JRadioButton alafToggle = new JRadioButton("Alfa");
+    JRadioButton tinkoffToggle = new JRadioButton("Tinkoff");
+    JRadioButton vtbToggle = new JRadioButton("VTB");
+    JRadioButton sberToggle = new JRadioButton("Sberbank");
+
+    JLabel interestRate = new JLabel("Mortgage calculator");
+    JLabel labelValue = new JLabel("Property value");
+    JLabel labelDownPayment = new JLabel("Initial instalment");
+    JLabel labelTerm = new JLabel("Credit period"); // in months
+
     JTextField warningMessage = new JTextField();
     Font fontForPoppedUpMes = new Font("Cambria", Font.ITALIC, 12);
     Font fontFotTitles = new Font("Cambria", Font.BOLD, 16);
@@ -334,9 +356,11 @@ public class FrameClass {
     ButtonGroup bt = new ButtonGroup();
 
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) {
         new FrameClass();
     }
+
+    /*----Below two methods allow input data in following format '000 000 000' for user convenience*/
 
     public  String getThreeViewOfTheString(String textValue){
         String temp = "";

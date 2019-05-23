@@ -9,13 +9,25 @@ import ru.calculation.Calculation;
 import java.io.IOException;
 import java.net.URL;
 
+/*---------------------------Parsing the loan interest rate for ALFA bank-----------------------------------------*/
+
 public class AlfaParcer {
     public static String link = "https://alfabank.ru/get-money/mortgage/programs/digital-ab/";
 
     public static Double getAlfaRate() throws IOException{
-            Document page = Jsoup.parse(new URL(link), 3000);
+        Document page = Jsoup.parse(new URL(link), 3000);
 
-        /*   This snippet throws the error due to unreachable selection via "class = heading__bitK5 size-h1__13jm2 theme-white__pN1fX heading__27isq":
+        Element elem = page.select("p[class = value__2DqcQ]").get(2);
+        Element elemStrong = elem.selectFirst("strong");
+        String kup = Calculation.getRegexString(elemStrong.text());
+        return Double.parseDouble(kup);
+    }
+}
+
+
+// Just for myself:
+
+ /*   This snippet throws the error due to unreachable selection via "class = heading__bitK5 size-h1__13jm2 theme-white__pN1fX heading__27isq":
 
             Element elem = page.select("h1[class = heading__bitK5 size-h1__13jm2 theme-white__pN1fX heading__27isq").first();
         //
@@ -31,9 +43,3 @@ public class AlfaParcer {
             }catch (NumberFormatException e){
                  return Double.parseDouble(value[1].replace(",","."));
         } */
-        Element elem = page.select("p[class = value__2DqcQ]").get(2);
-        Element elemStrong = elem.selectFirst("strong");
-        String kup = Calculation.getRegexString(elemStrong.text());
-        return Double.parseDouble(kup);
-    }
-}
